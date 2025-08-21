@@ -5,6 +5,7 @@ dotenv.config();
 const cors = require("cors");
 const connectDB = require("./config/database")
 const userRoutes = require("./routes/userRoute")
+const path = require("path");
 
 
 const app = express();
@@ -25,6 +26,8 @@ connectDB();
 // Routes
 app.use("/", userRoutes);
 
+// serve uploaded files
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Server PORT
 
