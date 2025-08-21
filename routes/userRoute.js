@@ -3,7 +3,7 @@ const express = require("express")
 const router = express.Router()
 const multer = require("multer")
 const path = require("path")
-const {getUser, deleteUser, newUser, userById, updateUser} = require("../controllers/UserController")
+const {getUser, deleteUser, newUser, userById, updateUser} = require("../controllers/userController")
 
 
 
